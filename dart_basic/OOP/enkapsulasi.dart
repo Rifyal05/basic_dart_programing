@@ -1,27 +1,48 @@
-class Hewan {
-  String nama;
-  String suarahewan;
-  int umur;
+class Komputer {
+  String _cpu;
+  String _memori;
+  String _penyimpanan;
+  bool _nyala = false;
 
-  // Konstruktor
-  Hewan(this.nama, this.umur, this.suarahewan);
+  Komputer(this._cpu, this._memori, this._penyimpanan);
 
-  // Metode
-  void suara() {
-    print('$nama mengeluarkan suara $suarahewan');
+  void nyalakan() {
+    if (!_nyala) {
+      _nyala = true;
+      print('Komputer menyala...');
+    } else {
+      print('Komputer sudah menyala.');
+    }
+  }
+
+  void matikan() {
+    if (_nyala) {
+      _nyala = false;
+      print('Komputer mati...');
+    } else {
+      print('Komputer sudah mati.');
+    }
+  }
+
+  void tampilkanSpesifikasi() {
+    print('Spesifikasi Komputer:');
+    print('  CPU: $_cpu');
+    print('  Memori: $_memori');
+    print('  Penyimpanan: $_penyimpanan');
+    print('  Status: ${_nyala ? 'Menyala' : 'Mati'}');
   }
 }
 
 void main() {
-  // Membuat objek dari kelas Hewan
-  Hewan kucing = Hewan('Kucing', 2, 'Guk Guk');
-  Hewan anjing = Hewan('Anjing!!', 3, 'Meong..');
-
-  // Mengakses atribut objek
-  print('Nama kucing: ${kucing.nama}');
-  print('Umur anjing: ${anjing.umur}');
-
-  // Memanggil metode objek
-  kucing.suara();
-  anjing.suara();
+  Komputer komputerSaya = Komputer('AMD Ryzen 5', '16GB', '512GB SSD');
+  // status awal
+  komputerSaya.tampilkanSpesifikasi();
+  print("");
+  // menyalakan komputer
+  komputerSaya.nyalakan();
+  komputerSaya.tampilkanSpesifikasi();
+  print("");
+  // mematikan komputer
+  komputerSaya.matikan();
+  komputerSaya.tampilkanSpesifikasi();
 }
