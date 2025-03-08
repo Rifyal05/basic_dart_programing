@@ -3,9 +3,8 @@
 // 1. "Buatlah program Dart yang menghitung luas lingkaran dengan jari-jari 7.
 // Gunakan variabel double untuk menyimpan nilai jari-jari dan pi (3.14)."
 // 2. "Buatlah program Dart yang menghitung rata-rata dari tiga angka dengan 2 desimal
-// Gunakan variabel int untuk menyimpan bilangan-bilangan tersebut
 // dan  1 int serta variabel double untuk menyimpan rata-rata."
-// 3. "Buatlah program Dart yang menukar nilai dari dua variabel int
+// 3. "Buatlah program Dart yang menukar nilai dari 3 variabel int
 // tanpa menggunakan variabel tambahan."
 
 import 'dart:math';
